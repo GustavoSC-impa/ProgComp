@@ -14,7 +14,6 @@ ll gdc ( ll a, ll b){
  
 int main(){
  
-
-    cout << gdc(4, 30);
+    cout << 4%2 << ' ';
 
 }

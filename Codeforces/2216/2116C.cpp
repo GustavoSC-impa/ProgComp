@@ -93,17 +93,13 @@ int main(){
                 ll ramk = 0, score = 10000000;
 
                 for ( int i = 0; i < n; i++){
-                    for ( int j = i; j < n; j++){ // aqui vai testar todas as combinações
+                    for ( int j = i + 1; j < n; j++){ // aqui vai testar todas as combinações
 
                     ll ram = 0, idp = 0;
 
                     ll result = gdc(core[i], core[j]); // entre todos os caras, pega o que tem menos fator
 
-                    while(result != 1){
-                        while ( result%primos[idp] != 0) idp++;
-                        ram++; result /= primos[idp];
-                    }
-
+                    for ( ll p : primos) if ( result%p == 0) ram++;
 
                     if ( ram <= score){
                         score = ram; 
@@ -135,12 +131,9 @@ int main(){
 
                         ll result = gdc ( core[i], core[idx]); // aqui pegou o gdc do alvo e do atual
                         ll apk = result;
-                        ll ram = 0, idp = 0;
+                        ll ram = 0, idp = -1;
 
-                        while(result != 1){
-                            while ( result%primos[idp] != 0) idp++;
-                            ram++; result /= primos[idp];
-                        }
+                        for ( ll p : primos) if ( result%p == 0) ram++;
 
 
                         if ( ram <= score){
@@ -152,7 +145,7 @@ int main(){
                     }
 
                     core[idx] = ramk;
-                    ans++;
+                    ans++; // aqui foi feita uma operação
                     
 
                 }
@@ -183,6 +176,10 @@ int main(){
 2100 3080 3570 3300 420 3630 4830 1386 990 1680 3850 4158 1980 840 3234 1540 1848 3780 
 4410 4200 4950 3960 2730 3696 1050 2970 3465 2772 1320 3990 462 1470 770 3150 2520 1650 
 2310 1890 1260 2940 2640 4290 1155 630 924 330 210 660 3360 4620
+
+
+
+70 15 21
 
 
 //*/
