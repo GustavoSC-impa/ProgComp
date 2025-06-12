@@ -2,18 +2,12 @@
 using namespace std;    
 #define ll long long
 
-ll gdc ( ll a, ll b){
-    while (b != 0) {
-        int resto = a % b;
-        a = b;
-        b = resto;
-    }
-    return a;
-}
- 
+
  
 int main(){
  
-    cout << 4%2 << ' ';
+    
+    vector<ll> core (100000000, 0);
+    cout << "tche";
 
 }
