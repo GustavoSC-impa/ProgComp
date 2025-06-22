@@ -12,6 +12,18 @@ int main(){
  
     while (t--){
 
+        int n, q; cin >> n >> q;
+
+        vector<ll> core (n+2, 0);
+
+        for ( int i = 0; i <n; i++) cin >> core[i];
+
+        vector<tuple<ll,ll,ll>> troca;
+
+        for ( int i = 0; i<q; i++){
+            ll x, y, z;
+        }
+
 
     }
     return 0;
