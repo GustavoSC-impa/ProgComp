@@ -49,8 +49,9 @@ bool Solve(){
 
         for ( ll i = 0; i < n; i++){
             v[i][0] = 0; v[i][1] = 0;
-        }
+        } // zerando todas as entrada
 
+        
         // um ciclo vai se encontrado em se chegou num cara que já foi visitado
         
 
