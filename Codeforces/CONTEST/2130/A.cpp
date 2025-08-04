@@ -26,13 +26,6 @@ int main(){
         cout << score << '\n';
 
 
-
-        // os 0 nunca vão entrar na operação de soma
-
-
-
-
-
     }
     return 0;
 }
